@@ -1,0 +1,18 @@
+.h80{
+    height: 80vh;
+    z-index: 0 !important;
+}
+.h100 {
+    height: 100%;
+}
+@media (hover: none) {
+    .h100 {
+        height: 40%;
+    }
+    .right {
+        margin-right: 3vw;
+    }
+}
+.ddm {
+    z-index: 2;
+}
