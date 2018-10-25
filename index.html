@@ -26,10 +26,10 @@
             </div>
         </nav>
         <main class="row fixed-bottom d-flex justify-content-center align-items-center h80">
-            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info h100 mb-3">
+            <div onclick="startTimer(1)" ondblclick="playerDecrement(1)" class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info h100 mb-3">
                 <h1 id="player1">0</h1>
             </div>
-            <div class="col-12 col-md-4 offset-md-1 d-flex justify-content-center align-items-center bg-dark h100 mb-3">
+            <div onclick="startTimer(2)" class="col-12 col-md-4 offset-md-1 d-flex justify-content-center align-items-center bg-dark h100 mb-3">
                 <h1 id="player2">0</h1>
             </div>
         </main>
@@ -37,9 +37,9 @@
 
 
 
+    <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-    <script src="assets/app.js"></script>
 </body>
 </html>
