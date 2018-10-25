@@ -1,35 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="https://bootswatch.com/4/darkly/bootstrap.min.css">
     <title>Score Keepr</title>
 </head>
+
 <body>
     <div class="container-fluid text-white">
         <nav class="navbar fixed-top bg-secondary row">
             <div class="col d-flex justify-content-center">
-                <h1>Score Keepr</h1>
+                <h1 id="my-title">Score Keepr</h1>
             </div>
             <div class="col-1 dropleft right">
                 <i class="fas fa-bars fa-2x" data-toggle="dropdown"></i>
                 <div class="dropdown-menu dropdown-menu-right ddm">
-                    <button type="button" class="btn mb-2 btn-primary">Eleven</button>                    
-                    <button type="button" class="btn btn-secondary">Twenty-one</button>                    
+                    <button onclick="setScoreToWin(11)" type="button" class="btn mb-2 btn-primary">Eleven</button>
+                    <button onclick="setScoreToWin(21)" type="button" class="btn btn-secondary">Twenty-one</button>
                     <div class="dropdown-divider"></div>
-                    <button type="button" class="btn mb-2 btn-danger">Reset</button>
+                    <button onclick="reset()" type="button" class="btn mb-2 btn-danger">Reset</button>
                 </div>
             </div>
         </nav>
-        <main class="row fixed-bottom d-flex justify-content-center align-items-center h80">
-            <div onclick="startTimer(1)" ondblclick="playerDecrement(1)" class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info h100 mb-3">
+        <main class="row fixed-bottom d-flex justify-content-center align-items-stretch h80">
+            <div onclick="playerIncrement(1)" onwheel="playerDecrement(event, 1)" class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info mb-3">
                 <h1 id="player1">0</h1>
             </div>
-            <div onclick="startTimer(2)" class="col-12 col-md-4 offset-md-1 d-flex justify-content-center align-items-center bg-dark h100 mb-3">
+            <div onclick="playerIncrement(2)" onwheel="playerDecrement(event, 2)" class="col-12 col-md-4 offset-md-1 d-flex justify-content-center align-items-center bg-dark mb-3">
                 <h1 id="player2">0</h1>
             </div>
         </main>
@@ -39,7 +42,8 @@
 
     <script src="app.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
 </body>
+
 </html>
