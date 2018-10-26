@@ -1,15 +1,6 @@
-.h80{
-    height: 80vh;
-    z-index: 0 !important;
-}   
-@media (hover: none) {
-    .h100 {
-        height: 40%;
-    }
-    .right {
-        margin-right: 3vw;
-    }
+.h20 {
+    height: 20vh;
 }
-.ddm {
-    z-index: 2;
+.h80 {
+    height: 80vh;
 }

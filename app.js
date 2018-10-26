@@ -5,7 +5,7 @@ let player1Score = document.getElementById("player1")
 let player2Score = document.getElementById("player2")
 let player1Available = true;
 let player2Available = true;
-let scoreToWin;
+let scoreToWin = '11';
 let myTitle = document.getElementById("my-title")
 
 //
@@ -28,23 +28,19 @@ function playerIncrement(num) {
         endGame()
     }
 }
+
 function playerDecrement(e, num) {
     if (num != 1 && num != 2) { return }
     if (num == 1 && e.deltaY < 0 && player1Available && player1Score.textContent != '0') {
         player1Available = false
-        let wait = setTimeout(() => player1Available = true, 1000)
+        let wait = setTimeout(() => player1Available = true, 2000)
         player1Score.textContent = (parseFloat(player1Score.textContent) - 1).toString();
     }
     if (num == 2 && e.deltaY < 0 && player2Available && player2Score.textContent != '0') {
         player2Available = false
-        let wait = setTimeout(() => player2Available = true, 1000)
+        let wait = setTimeout(() => player2Available = true, 2000)
         player2Score.textContent = (parseFloat(player2Score.textContent) - 1).toString();
     }
-}
-
-function reset() {
-    player1Score.textContent = "0";
-    player2Score.textContent = "0";
 }
 
 function setScoreToWin(target) {
@@ -52,5 +48,5 @@ function setScoreToWin(target) {
 }
 
 function endGame() {
-    
+    document.getElementById("game").style.pointerEvents = 'none';
 }

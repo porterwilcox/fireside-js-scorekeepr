@@ -12,32 +12,35 @@
     <title>Score Keepr</title>
 </head>
 
-<body>
-    <div class="container-fluid text-white">
-        <nav class="navbar fixed-top bg-secondary row">
+<body class="text-white">
+    <div class="container-fluid">
+        <div class="row h20 bg-primary d-flex align-items-center">
             <div class="col d-flex justify-content-center">
-                <h1 id="my-title">Score Keepr</h1>
+                <h1 id="my-title">ScoreKeepr</h1>
             </div>
-            <div class="col-1 dropleft right">
-                <i class="fas fa-bars fa-2x" data-toggle="dropdown"></i>
-                <div class="dropdown-menu dropdown-menu-right ddm">
-                    <button onclick="setScoreToWin(11)" type="button" class="btn mb-2 btn-primary">Eleven</button>
-                    <button onclick="setScoreToWin(21)" type="button" class="btn btn-secondary">Twenty-one</button>
+            <div class="dropleft col-1 d-flex justify-content-center">
+                <i class="fas fa-bars fa-3x" data-toggle="dropdown"></i>
+                <div class="dropdown-menu">
+                    <button onclick="setScoreToWin('11')" type="button" class="btn mb-2 btn-primary">Eleven</button>
+                    <button onclick="setScoreToWin('21')" type="button" class="btn btn-secondary">Twenty-one</button>
                     <div class="dropdown-divider"></div>
-                    <button onclick="reset()" type="button" class="btn mb-2 btn-danger">Reset</button>
+                    <button onclick="location.reload()" type="button" class="btn mb-2 btn-danger">Reset</button>
                 </div>
             </div>
-        </nav>
-        <main class="row fixed-bottom d-flex justify-content-center align-items-stretch h80">
-            <div onclick="playerIncrement(1)" onwheel="playerDecrement(event, 1)" class="col-12 col-md-4 d-flex justify-content-center align-items-center bg-info mb-3">
-                <h1 id="player1">0</h1>
+        </div>
+        <div id="game" class="row h80">
+            <div onclick="playerIncrement(1)" onwheel="playerDecrement(event, 1)" class="col-12 col-md-6 d-flex align-items-stretch bg-info">
+                <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+                    <h1 id="player1">0</h1>
+                </div>
             </div>
-            <div onclick="playerIncrement(2)" onwheel="playerDecrement(event, 2)" class="col-12 col-md-4 offset-md-1 d-flex justify-content-center align-items-center bg-dark mb-3">
-                <h1 id="player2">0</h1>
+            <div onclick="playerIncrement(2)" onwheel="playerDecrement(event, 2)" class="col-12 col-md-6 d-flex align-items-stretch bg-dark">
+                <div class="h-100 w-100 d-flex justify-content-center align-items-center">
+                    <h1 id="player2">0</h1>
+                </div>
             </div>
-        </main>
+        </div>
     </div>
-
 
 
     <script src="app.js"></script>
