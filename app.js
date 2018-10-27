@@ -19,15 +19,14 @@ function playerIncrement(num) {
     else {
         player2Score.textContent = (parseFloat(player2Score.textContent) + 1).toString();
     }
-    if (player1Score.textContent == scoreToWin || player2Score.textContent == scoreToWin) {
-        if (player1Score.textContent == scoreToWin) {
-            myTitle.textContent = "Player 1 wins!"
-            endGame();
-            return;
-        }
+    if (player1Score.textContent == scoreToWin) {
+        myTitle.textContent = "Player 1 wins!"
+        endGame();
+    }
+    else if ( player2Score.textContent == scoreToWin) {
         myTitle.textContent = "Player 2 wins!"
         endGame()
-    }
+    }  
 }
 
 function playerDecrement(e, num) {
