@@ -15,9 +15,10 @@ function playerIncrement(num) {
     if (num != 1 && num != 2) { return }
     if (num == 1) {
         player1Score.textContent = (parseFloat(player1Score.textContent) + 1).toString();
-        return;
     }
-    player2Score.textContent = (parseFloat(player2Score.textContent) + 1).toString();
+    else {
+        player2Score.textContent = (parseFloat(player2Score.textContent) + 1).toString();
+    }
     if (player1Score.textContent == scoreToWin || player2Score.textContent == scoreToWin) {
         if (player1Score.textContent == scoreToWin) {
             myTitle.textContent = "Player 1 wins!"
