@@ -21,18 +21,18 @@
             <div class="dropleft col-1 d-flex justify-content-center">
                 <i class="fas fa-bars fa-3x" data-toggle="dropdown"></i>
                 <div class="dropdown-menu px-2">
-                    <button onclick="setScoreToWin(11)" type="button" class="btn mb-2 btn-primary">Eleven</button>
-                    <button onclick="setScoreToWin(21)" type="button" class="btn btn-secondary">Twenty-one</button>
+                    <button onclick="setScoreToWin('11')" type="button" class="btn mb-2 btn-primary">Eleven</button>
+                    <button onclick="setScoreToWin('21')" type="button" class="btn btn-secondary">Twenty-one</button>
                     <div class="dropdown-divider"></div>
                     <button onclick="location.reload()" type="button" class="btn mb-2 btn-danger">Reset</button>
                 </div>
             </div>
         </div>
         <div id="game" class="row h80">
-            <div onclick="playerIncrement(0)" onwheel="playerDecrement(event, 1)" class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-info">
+            <div onclick="playerIncrement(1)" onwheel="playerDecrement(event, 1)" class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-info">
                 <h1 id="player1">0</h1>
             </div>
-            <div onclick="playerIncrement(1)" onwheel="playerDecrement(event, 2)" class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-dark">
+            <div onclick="playerIncrement(2)" onwheel="playerDecrement(event, 2)" class="col-12 col-md-6 d-flex justify-content-center align-items-center bg-dark">
                 <h1 id="player2">0</h1>
             </div>
         </div>
