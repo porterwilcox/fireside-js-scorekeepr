@@ -31,12 +31,12 @@ function playerIncrement(num) {
 
 function playerDecrement(e, num) {
     if (num != 1 && num != 2) { return }
-    if (num == 1 && e.deltaY < 0 && player1Available && player1Score.textContent != '0') {
+    if (num == 1 && e.deltaY > 0 && player1Available && player1Score.textContent != '0') {
         player1Available = false
         let wait = setTimeout(() => player1Available = true, 2000)
         player1Score.textContent = (parseFloat(player1Score.textContent) - 1).toString();
     }
-    if (num == 2 && e.deltaY < 0 && player2Available && player2Score.textContent != '0') {
+    if (num == 2 && e.deltaY > 0 && player2Available && player2Score.textContent != '0') {
         player2Available = false
         let wait = setTimeout(() => player2Available = true, 2000)
         player2Score.textContent = (parseFloat(player2Score.textContent) - 1).toString();

@@ -3,4 +3,5 @@
 }
 .h80 {
     height: 80vh;
+    user-select: none;
 }
