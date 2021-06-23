@@ -12,13 +12,14 @@ let myTitle = document.getElementById("my-title")
 //FUNCTIONS
 //
 function playerIncrement(num) {
-    if (num != 1 && num != 2) { return }
+    if (num != 1 && num != 2) { return } //NOTE to prevent hackers because no encapsulation
     if (num == 1) {
         player1Score.textContent = (parseFloat(player1Score.textContent) + 1).toString();
     }
     else {
         player2Score.textContent = (parseFloat(player2Score.textContent) + 1).toString();
     }
+    
     if (player1Score.textContent == scoreToWin) {
         myTitle.textContent = "Player 1 wins!"
         endGame();
